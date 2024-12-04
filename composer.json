@@ -24,7 +24,10 @@
     "autoload": {
         "psr-4": {
             "Zk2\\MicrosoftIdentityAuth\\": "src/Zk2/MicrosoftIdentityAuth"
-        }
+        },
+        "classmap": [
+            "src/"
+        ]
     },
     "config": {
         "allow-plugins": {
