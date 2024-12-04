@@ -4,7 +4,7 @@
 
 <?php
 
-use Zk2\MicrosoftIdentityAuth\IdentUser;
+use Zk2\MicrosoftIdentityAuth\MicrosoftIdentityAuth\IdentUser;
 
 require __DIR__.'/vendor/autoload.php';
 

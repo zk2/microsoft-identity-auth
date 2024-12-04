@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Zk2\\MicrosoftIdentityAuth\\": "src/Zk2"
+            "Zk2\\MicrosoftIdentityAuth\\": "src/Zk2/MicrosoftIdentityAuth"
         }
     },
     "config": {
