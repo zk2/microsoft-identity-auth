@@ -1,5 +1,9 @@
 {
     "name": "zk2/microsoft-identity-auth",
+    "description": "Build API clients for PHP with Microsoft identity authentication",
+    "homepage": "https://github.com/zk2/microsoft-identity-auth",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Evgeniy Budanov",
