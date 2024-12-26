@@ -8,16 +8,16 @@ use Microsoft\Kiota\Http\GuzzleRequestAdapter;
 
 readonly class IdentUser
 {
-    public function __construct(private string $microsoftClientId, private string $microsoftClientSecret, private string $redirectUri){}
+    public function __construct(private string $microsoftClientId, private string $microsoftClientSecret){}
 
-    public function identifyUser(string $authorizationCode): array
+    public function identifyUser(string $authorizationCode, string $redirectUri): array
     {
         $tokenRequestContext = new AuthorizationCodeContext(
             'common',
             $this->microsoftClientId,
             $this->microsoftClientSecret,
             $authorizationCode,
-            $this->redirectUri
+            $redirectUri
         );
 
         $authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, ['User.Read'], ['graph.microsoft.com']);
