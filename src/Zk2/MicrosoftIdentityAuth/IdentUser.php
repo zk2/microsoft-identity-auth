@@ -10,14 +10,15 @@ readonly class IdentUser
 {
     public function __construct(private string $microsoftClientId, private string $microsoftClientSecret){}
 
-    public function identifyUser(string $authorizationCode, string $redirectUri): array
+    public function identifyUser(string $authorizationCode, string $redirectUri, array $additionalParams = []): array
     {
         $tokenRequestContext = new AuthorizationCodeContext(
             'common',
             $this->microsoftClientId,
             $this->microsoftClientSecret,
             $authorizationCode,
-            $redirectUri
+            $redirectUri,
+            $additionalParams
         );
 
         $authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, ['User.Read'], ['graph.microsoft.com']);
